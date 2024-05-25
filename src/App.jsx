@@ -29,6 +29,8 @@ const App = () => {
 
   return (
     <div>
+      <p className="font-semibold text-3xl text-center mt-4">Image Slider</p>
+
       <div className="m-2 p-2 flex justify-center items-center">
         <img
           onClick={loadPrevImage}
