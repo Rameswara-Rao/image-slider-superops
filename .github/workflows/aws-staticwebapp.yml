@@ -37,7 +37,10 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
       
       - name: deploy to s3
-        run: aws s3 sync ./dist/ s3://{{ MY_BUCKET }}/
+        run: aws s3 sync ./dist/ s3://image-slider-superops --recursive
       
-      - name: invalidate cloudfront cache
-        run: aws cloudfront create-invalidation --distribution-id {{ MY_CLOUDFRONT_DISTRO_ID }}--paths "/*" "/"
+      - name: Create CloudFront invalidation
+        uses: josemando/aws-cloudfront-create-invalidation@v1
+        with:
+          distribution-id: E3NCOAL01RTBHA
+          paths: /*
