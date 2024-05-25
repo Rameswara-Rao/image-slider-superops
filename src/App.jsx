@@ -2,11 +2,11 @@ import { useState, useEffect } from "react";
 
 const App = () => {
   const images = [
-    "https://superops-images.s3.eu-north-1.amazonaws.com/image+1.webp",
-    "https://superops-images.s3.eu-north-1.amazonaws.com/image+2.webp",
-    "https://superops-images.s3.eu-north-1.amazonaws.com/image+3.webp",
-    "https://superops-images.s3.eu-north-1.amazonaws.com/image+4.webp",
-    "https://superops-images.s3.eu-north-1.amazonaws.com/image+5.webp",
+    "https://d1qkelptvjrhil.cloudfront.net/image%201.webp",
+    "https://d1qkelptvjrhil.cloudfront.net/image%202.webp",
+    "https://d1qkelptvjrhil.cloudfront.net/image%203.webp",
+    "https://d1qkelptvjrhil.cloudfront.net/image%204.webp",
+    "https://d1qkelptvjrhil.cloudfront.net/image%205.webp",
   ];
   const [active, setActive] = useState(0);
 
