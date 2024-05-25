@@ -37,7 +37,7 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
       
       - name: deploy to s3
-        run: aws s3 sync ./dist/ s3://image-slider-superops --recursive
+        run: aws s3 sync ./dist/ s3://image-slider-superops
       
       - name: Create CloudFront invalidation
         uses: josemando/aws-cloudfront-create-invalidation@v1
